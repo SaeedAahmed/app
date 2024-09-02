@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    @* Start Header *@
+    <nav class="mt-5">
+        <center>
+            <a href="/Home/Index" class="btn btn-primary">Home</a>
+            <a href="/Home/AboutUs" class="btn btn-warning">About Us</a>
+            <a href="/Home/Privacy" class="btn btn-success">Privacy</a>
+            <a href="/Home/ContactUs" class="btn btn-light">Contact Us</a>
+            <a href="/Account/Login" class="btn btn-light">Login</a>
+            <a href="/Account/Register" class="btn btn-light">Register</a>
+        </center>
+    </nav>
+    @* End Header *@
+
+    <div>
+        @RenderBody()
+    </div>
+</body>
+</html>
