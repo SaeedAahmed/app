@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link href="~/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    @* Start Header *@
+    <nav class="mt-5">
+        <center>
+            @* 1. Html Tag *@
+            @* <a href="/Home/Index" class="btn btn-primary">Home</a> *@
+
+            @* 2. Html Helpers *@
+            @*@Html.ActionLink("Home", "Index","Home", null, new { @class = "btn btn-primary" })*@
+
+            @* 3. Tag Helper *@
+            <a asp-controller="Home" asp-action="Index" class="btn btn-primary">Home</a>
+            <a asp-controller="Home" asp-action="AboutUs" class="btn btn-warning">About Us</a>
+            <a asp-controller="Home" asp-action="Privacy" class="btn btn-success">Privacy</a>
+            <a asp-controller="Home" asp-action="ContactUs" class="btn btn-info">Contact Us</a>
+            <a asp-controller="Account" asp-action="Login" class="btn btn-light">Login</a>
+            <a asp-controller="Account" asp-action="Register" class="btn btn-light">Register</a>
+        </center>
+    </nav>
+    @* End Header *@
+
+    <div>
+        @RenderBody()
+    </div>
+
+
+    @* Start footer *@
+    <footer>
+        <center>
+            <div>
+                <p>CopyRights &copy; Saeed @DateTime.Now</p>
+            </div>
+        </center>
+    </footer>
+    @* End Footer *@
+</body>
+</html>
